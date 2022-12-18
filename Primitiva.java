@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-
-
+// Andres Emiliano Ramos Gimenez 2022.
 public class Primitiva {
     /*
      * Un constructor que permita pasar los datos de un sorteo: fecha,
@@ -119,7 +118,7 @@ public class Primitiva {
     }
     //MOSTRAR PREMIOS CONSEGUIDOS
     public static void mostrarPremiosConseguidos(){
-        int contador=5;
+        int contador=5; // Andres Emiliano Ramos Gimenez 2022
         for (int i = 0; i < getPremiosConseguidos().size(); i++) {
             System.out.println((contador)+"º Premio, veces conseguido: "+getPremiosConseguidos().get(i));
             contador--;
