@@ -2,13 +2,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 // Andres Emiliano Ramos Gimenez 2022.
 public class Primitiva {
-    /*
-     * Un constructor que permita pasar los datos de un sorteo: fecha,
-     * recaudación y combinación ganadora , para que se almacenen dentro de la
-     * clase. Debe comprobar que los números pasados son 7 y están en el rango
-     * permitido, generando una excepción en caso contrario
-     * (IllegalArgumentException).
-     */
     // ATRIBUTOS
     private String fecha;
     private double recaudacion;
@@ -56,23 +49,6 @@ public class Primitiva {
         }
         return primitiva;
     }
-    /*
-    // METODO COMPRUEBA NUMEROS COMBINACION GANADORA
-	public boolean comprobarNumerosPasados() throws IllegalArgumentException {
-		boolean rangoPermitido = false;
-		for (Iterator<Integer> iterator = combinacionGanadora.iterator(); iterator
-				.hasNext();) {
-			Integer type = (Integer) iterator.next();
-			if (type < 1 || type > 49)
-				rangoPermitido = true;
-		}
-		if (combinacionGanadora.size() == 6 && rangoPermitido)
-			return true;
-		else
-			throw new IllegalArgumentException();
-	}
-
-     */
 
     // METODO COMPRUEBA NUMEROS JUGADOS
     public static void compruebaNumeros(int[] numerosJugados) {
@@ -145,9 +121,9 @@ public class Primitiva {
 
         Primitiva primitiva1 = new Primitiva("01/06/2022",150000,sorteo1);
 
-        System.out.println("\nEste sorteo se ha jugado en la fecha: "+primitiva1.fecha+ "; con una recaudacion de: "+primitiva1.recaudacion);
+        System.out.println("\nEste sorteo se ha realizado en la fecha: "+primitiva1.fecha+ "; con una recaudacion de: "+primitiva1.recaudacion);
         System.out.println("===================================================================================");
-        int [] numerosJugados={1,2,3,4,5,6,15};
+        int [] numerosJugados={5,10,15,20,25,30,35,40,45};
         System.out.print("Números obetindos en el sorteo: "); mostarNumerosSorteo(sorteo1);
         System.out.println("Números jugados en el sorteo: " + Arrays.toString(numerosJugados));
 
@@ -156,7 +132,7 @@ public class Primitiva {
 
         ArrayList<Integer> sorteo2 = new ArrayList<Integer>();
         sorteo2.addAll(generarPrimitiva());
-        int [] numerosJugados2={1,2,3,4,5,6,15};
+        int [] numerosJugados2={5,10,15,20,25,30,35,40,45};
         System.out.print("\nNúmeros obetindos en el sorteo: "); mostarNumerosSorteo(sorteo2);
         System.out.println("Números jugados en el sorteo: " + Arrays.toString(numerosJugados));
 
